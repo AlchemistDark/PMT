@@ -16,8 +16,12 @@ readings=input("""
     
 """)
 r=readings.split( )
+a=0
 for i in r:
+    a+=1
     #diagonal in microns
-    print(float(i)*0.3)
+    d=(float(i)*0.3)
     #microhardness of the sample
-    print(18540*float(weight)/((float(i)*0.3)**2))
+    m=(18540*float(weight)/((float(i)*0.3)**2))
+    print("Отпечаток %(a)i: диагональ - %(d)-0.2f, мкм; \
+твёрдость - %(m)-0.2f, МПа" %vars())
